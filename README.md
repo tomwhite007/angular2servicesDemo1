@@ -14,7 +14,7 @@ ng generate service my-globals
 ```
 
 
-## in app.module.ts...
+in app.module.ts...
 ```javascript
 import { MyGlobalsService } from './my-globals.service' // add import
 
@@ -35,7 +35,7 @@ import { MyGlobalsService } from './my-globals.service' // add import
 })
 ```
 
-## in app-routing.module.ts...
+in app-routing.module.ts...
 ```javascript
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
@@ -46,7 +46,7 @@ const routes: Routes = [
 ];
 
 
-## in my-globals.service.ts...
+in my-globals.service.ts...
 
 export class MyGlobalsService {
 
@@ -57,7 +57,7 @@ export class MyGlobalsService {
    }
 ```
 
-## in app.component.ts...
+in app.component.ts...
 ```javascript
 import { MyGlobalsService } from './my-globals.service' // add import
 
@@ -79,7 +79,7 @@ export class AppComponent {
 }
 ```
 
-## in app.component.html...
+in app.component.html...
 ```html
 <h1>
   {{title}} {{mySharedValue}}
@@ -93,7 +93,7 @@ export class AppComponent {
 <router-outlet></router-outlet>
 ```
 
-## in page1.component.html...
+in page1.component.html...
 ```html
 <p>
   page1 works!
@@ -106,7 +106,7 @@ export class AppComponent {
 </p>
 ```
 
-## in page1.component.ts...
+in page1.component.ts...
 ```javascript
 import { MyGlobalsService } from '../my-globals.service' // add import
 
@@ -132,7 +132,7 @@ export class Page1Component implements OnInit {
 }
 ```
 
-## in page2.component.html...
+in page2.component.html...
 ```html
 <p>
   page2 works!
@@ -145,7 +145,7 @@ export class Page1Component implements OnInit {
 </p>
 ```
 
-## in page2.component.ts...
+in page2.component.ts...
 ```javascript
 import { MyGlobalsService } from '../my-globals.service' // add import
 
