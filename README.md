@@ -37,24 +37,27 @@ import { MyGlobalsService } from './my-globals.service' // add import
 
 in app-routing.module.ts...
 ```javascript
-import { Page1Component } from './page1/page1.component';
-import { Page2Component } from './page2/page2.component';
+import { Page1Component } from './page1/page1.component'; // add import
+import { Page2Component } from './page2/page2.component'; // add import
 
 const routes: Routes = [  
-  { path: 'page1', component: Page1Component },
-  { path: 'page2', component: Page2Component }  
+  { path: 'page1', component: Page1Component }, // replace routes
+  { path: 'page2', component: Page2Component }   // replace routes
 ];
-
+```
 
 in my-globals.service.ts...
-
+```javascript
+@Injectable()
 export class MyGlobalsService {
 
-  MySharedValue: string;
+  MySharedValue: string;  // add
 
   constructor() {
-    this.MySharedValue = 'start value!';
-   }
+    this.MySharedValue = 'start value!';  // add
+  }
+
+}
 ```
 
 in app.component.ts...
@@ -117,16 +120,16 @@ import { MyGlobalsService } from '../my-globals.service' // add import
 })
 export class Page1Component implements OnInit {
 
-  mySharedValue: string;
+  mySharedValue: string;  // add
 
-  constructor( private globals: MyGlobalsService) { }
+  constructor(private globals: MyGlobalsService) { }  // insert
 
   ngOnInit() {
-    this.mySharedValue = this.globals.MySharedValue;
+    this.mySharedValue = this.globals.MySharedValue;  // add
   }
-
+  
   updateService() {
-    this.globals.MySharedValue = this.mySharedValue;
+    this.globals.MySharedValue = this.mySharedValue;  // add
   }
 
 }
@@ -155,17 +158,16 @@ import { MyGlobalsService } from '../my-globals.service' // add import
   styleUrls: ['./page2.component.css']
 })
 export class Page2Component implements OnInit {
+  mySharedValue: string;  // add
 
-  mySharedValue: string;
-
-  constructor( private globals: MyGlobalsService) { }
+  constructor(private globals: MyGlobalsService) { }  // insert
 
   ngOnInit() {
-    this.mySharedValue = this.globals.MySharedValue;
+    this.mySharedValue = this.globals.MySharedValue;  // add
   }
-
+  
   updateService() {
-    this.globals.MySharedValue = this.mySharedValue;
+    this.globals.MySharedValue = this.mySharedValue;  // add
   }
 
 }
