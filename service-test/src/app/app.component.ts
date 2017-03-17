@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MyGlobalsService } from './my-globals.service' // add import
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  mySharedValue: string; // add
+
+  constructor( private globals: MyGlobalsService) { } // add
+
+  ngOnInit() {
+    this.mySharedValue = this.globals.MySharedValue;  // add
+  }
+  
 }
