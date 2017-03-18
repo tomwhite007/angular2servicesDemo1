@@ -9,6 +9,7 @@ Note, the Typescript code extracts below only need to be changed where I've adde
 
 I've used a button click to update the variable in the service because it's easier to demonstrate the pros and cons of using a basic variable in a service to share state. The problem with this design is that app.component heading won't change because it hasn't been told to refresh.
 
+First, create a project and scaffolding with the CLI... 
 ```
 ng new service-test --routing
 
