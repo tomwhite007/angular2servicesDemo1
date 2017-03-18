@@ -1,6 +1,11 @@
 # angular2servicesDemo1
 Demo of sharing values between components
 
+In this Part 1 we can see how easy it is to set up global variables in a service. 
+
+Note, the Typescript code extracts below only need to be changed where I've added comments on the end of the line. 
+
+I've used a button click to update the variable in the service because it's easier to demonstrate the pros and cons of using a basic variable in a service to share state. 
 ```
 ng new service-test --routing
 
