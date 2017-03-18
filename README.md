@@ -1,12 +1,13 @@
 # angular2servicesDemo1
 Demo of sharing values between components
 
-In this Part 1 we can see how easy it is to set up global variables in a service. The problem with this design is that app.component heading won't change because it hasn't been told to refresh. 
+This was created using Angular CLI at v1.0.0-rc.2
+
+In this Part 1 we can see how easy it is to set up global variables in a service.  
 
 Note, the Typescript code extracts below only need to be changed where I've added comments on the end of the line. 
 
-I've used a button click to update the variable in the service because it's easier to demonstrate the pros and cons of using a basic variable in a service to share state. 
-```
+I've used a button click to update the variable in the service because it's easier to demonstrate the pros and cons of using a basic variable in a service to share state. The problem with this design is that app.component heading won't change because it hasn't been told to refresh.```
 ng new service-test --routing
 
 cd service-test
