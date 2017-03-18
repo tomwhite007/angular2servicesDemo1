@@ -1,7 +1,7 @@
 # angular2servicesDemo1
 Demo of sharing values between components
 
-In this Part 1 we can see how easy it is to set up global variables in a service. The problem with this design is that app.component heading because it hasn't been told to refresh. 
+In this Part 1 we can see how easy it is to set up global variables in a service. The problem with this design is that app.component heading won't change because it hasn't been told to refresh. 
 
 Note, the Typescript code extracts below only need to be changed where I've added comments on the end of the line. 
 
